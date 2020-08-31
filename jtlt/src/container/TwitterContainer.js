@@ -7,14 +7,18 @@ export const TwitterContainer = (props) => {
   const [currentId, setCurrentId] = useState(0);
 
   useEffect(() => {
-    getTweets(props.search).then((data) => {
-      let newIds = [];
-      for (let x = 0; x < Object.keys(data.statuses).length; x++) {
-        newIds.push(data.statuses[x].id_str);
-      }
-      setIdData(newIds);
-      setCurrentId(0);
-    });
+    if (props.search !== "") {
+      getTweets(props.search).then((data) => {
+        let newIds = [];
+
+        for (let x = 0; x < Object.keys(data.statuses).length; x++) {
+          newIds.push(data.statuses[x].id_str);
+        }
+
+        setIdData(newIds);
+        setCurrentId(0);
+      });
+    }
   }, [props.search]);
 
   function leftBtn() {

@@ -10,12 +10,18 @@ export const DefinitionContainer = (props) => {
 
   useEffect(() => {
     getDefo(props.search).then((data) => {
+      if (props.search === "") {
+        return;
+      }
+
       setKana(data[0].japanese[0].reading);
       setKanji(data[0].japanese[0].word);
       setEng(data[0].senses[0].english_definitions[0]);
 
       if (data[0].senses.length >= 2) {
         setAltEng(`/ ${data[0].senses[1].english_definitions[0]}`);
+      } else {
+        setAltEng("");
       }
     });
   }, [props.search]);

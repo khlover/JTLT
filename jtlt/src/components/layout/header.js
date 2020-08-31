@@ -3,7 +3,7 @@ import React from "react";
 function Header() {
   return (
     <header style={headerStyle}>
-      <h1>Learn Language with Twitter</h1>
+      <h1>Learn Japanese with Twitter</h1>
     </header>
   );
 }

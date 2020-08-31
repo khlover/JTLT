@@ -7,7 +7,7 @@ import { DefinitionContainer } from "./container/DefinitionContainer";
 
 class App extends Component {
   state = {
-    finalsearch: "test",
+    finalsearch: "",
   };
 
   //Search value

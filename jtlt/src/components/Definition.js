@@ -5,9 +5,11 @@ class Definition extends Component {
   render() {
     return (
       <div>
-        <h2>{this.props.eng + this.props.altEng}</h2>
-        <h2>{this.props.kana}</h2>
-        <h2>{this.props.kanji}</h2>
+        <h2>
+          English: {this.props.eng} {this.props.altEng}
+        </h2>
+        <h2>Kana: {this.props.kana}</h2>
+        <h2>Kanji :{this.props.kanji}</h2>
       </div>
     );
   }

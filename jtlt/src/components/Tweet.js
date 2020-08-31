@@ -4,7 +4,7 @@ import { Tweet as ShowTweet } from "react-twitter-widgets";
 
 export class Tweet extends Component {
   render() {
-    return <ShowTweet tweetId={this.props.id} />;
+    return <ShowTweet tweetId={this.props.id} options={{ align: "center" }} />;
   }
 }
 
